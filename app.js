@@ -21,7 +21,7 @@ var app = new Vue({
                 this.songs[i].selected = false;
             }
             this.songs[id].selected = true;
-            set(id);
+            update(id);
         }
     }
 })
@@ -40,10 +40,10 @@ us1 = [42,44,43,46,43,41,38,36,38,38,36,35];
 ca1 = [34,31,33,28,30,29,34,30,32,33,32,31];
 au1 = [31,32,33,33,32,34,35,32,30,31,30,27];
 
-uk2 = [24,35,54,57,46,36,35,38,40,44,42,46];
-us2 = [42,44,43,46,43,41,38,36,38,38,36,35];
-ca2 = [30,32,33,31,32,34,30,32,35,37,39,35];
-au2 = [31,32,33,33,32,34,35,32,30,31,30,27];
+uk2 = [24,35,54,57,43,36,35,38,40,44,42,46];
+us2 = [42,42,43,46,43,39,38,36,38,38,36,35];
+ca2 = [30,32,32,31,32,31,30,32,35,37,39,35];
+au2 = [30,32,33,33,32,34,32,32,30,31,30,27];
 
 uk = [];
 us = [];
@@ -54,28 +54,6 @@ uk = uk0;
 us = us0;
 ca = ca0;
 au = au0;
-
-function set(id) {
-    if (id=0) {
-        uk = uk0;
-        us = us0;
-        ca = ca0;
-        au = au0;
-    }
-    if (id=1) {
-        uk = uk1;
-        us = us1;
-        ca = ca1;
-        au = au1;
-    }
-    else {
-        uk = uk2;
-        us = us2;
-        ca = ca2;
-        au = au2;
-    }
-    chart.update();
-}
 
 var chart = new Chart(document.getElementById("line-chart"), {
     type: 'line',
@@ -111,4 +89,120 @@ var chart = new Chart(document.getElementById("line-chart"), {
         }
     }
 });
+
+function update(id) {
+    chart.destroy();
+    if (id==0) {
+        chart = new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: uk0,
+                    label: "UK",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }, {
+                    data: us0,
+                    label: "USA",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }, {
+                    data: ca0,
+                    label: "Canada",
+                    borderColor: "#3cba9f",
+                    fill: false
+                }, {
+                    data: au0,
+                    label: "Australia",
+                    borderColor: "#e8c3b9",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Popularity of Songs by Country over the last year'
+                }
+            }
+        });
+    }
+
+    if (id==1) {
+        chart = new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: uk1,
+                    label: "UK",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }, {
+                    data: us1,
+                    label: "USA",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }, {
+                    data: ca1,
+                    label: "Canada",
+                    borderColor: "#3cba9f",
+                    fill: false
+                }, {
+                    data: au1,
+                    label: "Australia",
+                    borderColor: "#e8c3b9",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Popularity of Songs by Country over the last year'
+                }
+            }
+        });
+    }
+
+    if (id==2) {
+        chart = new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data: uk2,
+                    label: "UK",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }, {
+                    data: us2,
+                    label: "USA",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }, {
+                    data: ca2,
+                    label: "Canada",
+                    borderColor: "#3cba9f",
+                    fill: false
+                }, {
+                    data: au2,
+                    label: "Australia",
+                    borderColor: "#e8c3b9",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Popularity of Songs by Country over the last year'
+                }
+            }
+        });
+    }
+
+
+}
 
