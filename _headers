@@ -1,2 +1,2 @@
 /*
-  Content-Security-Policy: upgrade-insecure-requests; default-src https:; font-src https: data:
+## Disabled to test  Content-Security-Policy: upgrade-insecure-requests; default-src https:; font-src https: data:
