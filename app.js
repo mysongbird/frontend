@@ -10,6 +10,7 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
+        search: '',
         songs: [
             {id:0, text:"September - Earth, Wind & Fire", selected:true},
             {id:1, text:"Uptown Funk - Bruno Mars", selected:false},
@@ -85,7 +86,7 @@ var chart = new Chart(document.getElementById("line-chart"), {
     options: {
         title: {
             display: true,
-            text: 'Popularity of Songs by Country over the last year'
+            text: 'Popularity of \'September\' by Country over the last year'
         }
     }
 });
@@ -123,7 +124,7 @@ function update(id) {
             options: {
                 title: {
                     display: true,
-                    text: 'Popularity of Songs by Country over the last year'
+                    text: 'Popularity of \'September\' by Country over the last year'
                 }
             }
         });
@@ -160,7 +161,7 @@ function update(id) {
             options: {
                 title: {
                     display: true,
-                    text: 'Popularity of Songs by Country over the last year'
+                    text: 'Popularity of \'Uptown Funk\' by Country over the last year'
                 }
             }
         });
@@ -197,7 +198,7 @@ function update(id) {
             options: {
                 title: {
                     display: true,
-                    text: 'Popularity of Songs by Country over the last year'
+                    text: 'Popularity of \'Hey Ya!\' by Country over the last year'
                 }
             }
         });
