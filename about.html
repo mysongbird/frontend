@@ -39,6 +39,10 @@
             margin-bottom: 40px;
             z-index: 900;
         }
+        .content-box {
+            padding: 20px 20px 20px 60px;
+            width: 712px;
+        }
     </style>
 </head>
 <body>
@@ -57,18 +61,35 @@
         </nav>
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
-        <style>
-            .demo-list-item {
-                width: 300px;
-            }
-        </style>
-
 
         <div class="mdl-grid demo-content">
-            <div width="600">
-                <h3>About</h3>
-                SongBird is a project made as part of the Royal Hackaway Hackathon. <br \><br \>
-                The aim on the project is to try and graph the popularity of songs over time in each country, based on the number of times they appear in Featured playlists on Spotify.
+            <div>
+                <div class="content-box">
+
+                    <section class="row">
+                        <div class="mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text">About</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                SongBird is a project made as part of the Royal Hackaway Hackathon. <br \><br \>
+
+                                The aim for the project is to try and graph the popularity of songs over time in each country, based on the number of times they appear in Featured playlists on Spotify. <br><br>
+
+                                This is a front end web app which demonstrates some of the functionality of the backend API which has been created.
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a href="https://github.com/mysongbird/songbird" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                    See API
+                                </a>
+                            </div>
+                            <div class="mdl-card__menu">
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
             </div>
         </div>
     </main>
