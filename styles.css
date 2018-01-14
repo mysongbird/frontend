@@ -214,16 +214,20 @@ _:-ms-input-placeholder, :root .demo-graph {
           align-items: center;
 }
 
-#view-source {
-    position: fixed;
-    display: block;
-    right: 0;
-    bottom: 0;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    z-index: 900;
-}
+ #view-source {
+     position: fixed;
+     display: block;
+     right: 0;
+     bottom: 0;
+     margin-right: 40px;
+     margin-bottom: 40px;
+     z-index: 900;
+ }
 .content-box {
     padding: 20px 20px 20px 60px;
     width: 712px;
+}
+
+.demo-list-item {
+    width: 300px;
 }
