@@ -1,10 +1,10 @@
-var object = new Object();
-object["data"] = "test";
-var temp = fetch('http://localhost:8000/song/foo/popularity').then(function (value) {
-    object = value["data"];
-    console.log(value);
-    console.log(object);
-});
+// var object = new Object();
+// object["data"] = "test";
+// var temp = fetch('http://localhost:8000/song/foo/popularity').then(function (value) {
+//     object = value["data"];
+//     console.log(value);
+//     console.log(object);
+// });
 
 var app = new Vue({
     el: '#app',
@@ -41,7 +41,7 @@ us1 = [42,44,43,46,43,41,38,36,38,38,36,35];
 ca1 = [34,31,33,28,30,29,34,30,32,33,32,31];
 au1 = [31,32,33,33,32,34,35,32,30,31,30,27];
 
-uk2 = [24,35,52,50,39,36,35,36,40,42,42,44];
+uk2 = [24,35,36,38,40,45,35,36,40,42,42,44];
 us2 = [42,44,43,46,43,41,38,36,38,38,36,35];
 ca2 = [30,32,33,31,32,34,30,32,35,37,39,35];
 au2 = [31,32,33,33,32,34,35,32,30,31,30,27];
