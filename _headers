@@ -1,2 +1,2 @@
 /*
-  Content-Security-Policy: upgrade-insecure-requests; default-src https:; font-src https: data:; script-src https: 'unsafe-eval'
+  Content-Security-Policy: upgrade-insecure-requests; default-src https:; font-src https: data:; script-src https: 'unsafe-eval'; img-src https: data:
